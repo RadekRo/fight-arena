@@ -10,7 +10,7 @@ def clear():
 
 def fight(first_enemy, second_enemy):
 
-    start_fight = input("Do you want them to enter the arena?\nEnter 'Y'/'y' for yes. Any other key will leave the game: ")
+    start_fight = input("Do you want them to enter the arena and fight?\nEnter 'Y'/'y' for yes. Any other key will leave the game: ")
 
     if start_fight.upper() == "Y":
         turn = 1
