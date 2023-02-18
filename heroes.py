@@ -1,6 +1,6 @@
 import random 
 
-char_class = ["peasant", "thief", "pikeman", "knight", "horseman", "berserker", "wizard"]
+char_class = ["peasant", "thief", "pikeman", "knight", "templar", "berserker", "hero"]
 
 class Hero:
   
@@ -10,7 +10,7 @@ class Hero:
     self.weight = random.randint(75, 115)
     self.height = random.randint(165, 215)
     self.health = int((self.weight*self.height/100)-self.age)
-    self.lives = int((self.health / 10) + self.age/20) * "\u2764 "
+    self.lives = int((self.health / 10) + self.age/20)
     self.weapon = random.randint(1, 9)
     self.shield = random.randint(0, 7)
     self.power = self.weapon + self.shield
@@ -32,12 +32,13 @@ class Hero:
     #self.speed = random.randint(1, 3)
     
   def present_yourself(self):
+    lives = self.lives * "\u2764 "
     print(f"""Name: {self.name}
 Class: {self.char_class}
 Age: {self.age}
 Weight: {self.weight} kg
 Height: {self.height} cm
-Health: {self.lives}
+Health: {lives}
 Weapon: {self.weapon}
 Shield: {self.shield}
 Luck: {self.luck}
