@@ -16,6 +16,7 @@ names = ["James", "Conan", "Eric", "Bertrand", "Jason", "Jacob", "George", "Adam
 
 p1 = Hero(random.choice(names))
 p2 = Hero(random.choice(names))
+clear()
 print("These are the today's gladiators:\n*********************************")
 p1.present_yourself()
 p2.present_yourself()
